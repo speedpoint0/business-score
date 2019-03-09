@@ -6,31 +6,62 @@
   <script src="js/index.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+
 <head>
 <title>Business Score</title>
 
 </head>
 <body>
 
-<h1>This is a Heading</h1>
 
-
-<div class="row">
-    <form class="col s12" id="company-name-form">
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Facebook" id="first_name" type="text" class="validate">
-          <label for="first_name">Company Name</label>
+  <div class="row center-both" >
+      <form class="col s12" id="company-name-form">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Facebook" id="first_name" type="text" class="validate white-text">
+            <label for="first_name">Company Name</label>
+          </div>
         </div>
-      </div>
-    </form>
-</div>
+      </form>
+
+    <div class="col s4">
+      <p class="white-text" id="company-name"> Company Name:  </p>
+    </div>
+
+    <div class="col s4">
+      <p class="white-text" id="second"> Company Status:  </p>
+    </div>
+
+    <div class="col s4">
+      <p class="white-text" id="third"> Date of creation:  </p>
+    </div>
+
+    <div class="col s4">
+      <p class="white-text" id="fourth"> Anual Return Overdue:  </p>
+    </div>
+
+    <div class="col s4">
+      <p class="white-text" id="fifth"> Has Insolvency History:  </p>
+    </div>
+
+    <div class="col s4">
+      <p class="white-text" id="sixth"> In Dispute:  </p>
+    </div>
+
+
+    <div class="col 12 credit_score" >
+      <h1 class="white-text" id="credit-score"> CREDIT SCORE: </h1>
+    </div>
 
 
 
-<div class="row" id="data-output">
+  </div>
 
-</div>
+  <div class="row" id="data-output">
+
+  </div>
 
 </body>
 </html>
