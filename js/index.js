@@ -46,7 +46,11 @@ window.addEventListener("load", function() {
         var hasInsolvencyHistory = data.has_insolvency_history;
         var inDispute = data.registered_office_is_in_dispute;
         var counter;
-        var score = 858;
+
+        var random_number = Math.floor((Math.random() * 50) + 1);
+        var score = 900 - random_number;
+
+
 
 
         document.getElementById("second").innerHTML = "Company Status: "+ companyStatus;
@@ -57,26 +61,41 @@ window.addEventListener("load", function() {
 
         if (isOverdue == true ) {
           score = score - 154;
+          document.getElementById("fourth").style.color = "red";
+        } else {
+          document.getElementById("fourth").style.color = "green";
         }
 
         if (hasInsolvencyHistory == true ) {
-          score = score - 259;
+          score = score - 404;
+          document.getElementById("fifth").style.color = "red";
+        } else {
+          document.getElementById("fifth").style.color = "green";
         }
 
         if (inDispute == true ) {
-          score = score - 350;
+          score = score - 321;
+          document.getElementById("sixth").style.color = "red";
+        } else {
+          document.getElementById("sixth").style.color = "green";
+        }
+        if (companyStatus == "administration" ) {
+          score = score - 121;
+          document.getElementById("second").style.color = "red";
+        } else {
+          document.getElementById("second").style.color = "green";
         }
 
         console.log(score);
         var scoreElem = document.getElementById("credit-score");
         scoreElem.innerHTML = "CREDIT SCORE: " + score;
-        if (score > 700) {
-          scoreElem.classList.add("green-text");
-        } else if (score >500) {
-          scoreElem.classList.add("orange-text");
+        if (score > 800) {
+          console.log("in text");
+          scoreElem.style.color = "green";
+        } else if (score > 600) {
+          scoreElem.style.color = "orange";
         } else if (score <=500) {
-          scoreElem.classList.add("red-text");
-
+          scoreElem.style.color = "red";
         }
 
       }

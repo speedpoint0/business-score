@@ -6,14 +6,22 @@ body {
 
 .center-both {
   position: relative;
-  top: 200px;
+  top: 100px;
   background-color:	#000000;
   height: 500px;
-  opacity:0.7;
+  opacity:0.8;
   margin: 0 auto;
 }
 
 .credit_score {
   position: relative;
-  top: 70px;
+  top: 150px;
+}
+
+.white-header {
+  color:white;
+}
+
+p {
+  color: green;
 }
