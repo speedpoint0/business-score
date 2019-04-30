@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
     /* do what you want with the form */
     var searchURL = "https://api.companieshouse.gov.uk/search/companies";
     var searchName = document.getElementById('first_name').value;
-    console.log("new coe");
+    console.log("new codee");
     $.ajax({
       type: 'GET',
       url: searchURL,
