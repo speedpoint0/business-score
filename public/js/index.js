@@ -8,13 +8,14 @@ window.addEventListener("load", function() {
     /* do what you want with the form */
     var searchURL = "https://api.companieshouse.gov.uk/search/companies";
     var searchName = document.getElementById('first_name').value;
+    console.log("new coe");
     $.ajax({
       type: 'GET',
       url: searchURL,
       crossDomain: true,
       dataType: "jsonp",
       headers: {
-       "Authorization": "Basic " + btoa("-krl2EzpROULbniJf9FlgdF2mHxBhIGinjQ1_fao")
+       "Authorization": "Basic " + btoa("uyqRhJKv06UFc0k9JCLSG6jkIqXnC2r96G9_aMbw")
       },
       data: {
         q: searchName
@@ -26,12 +27,13 @@ window.addEventListener("load", function() {
         document.getElementById("company-name").innerHTML = "Company Name: "+ companyName;
         next(companyNumber)
         console.log(companyNumber);
-        console.log("its working?")
+        console.log("it works?");
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) { 
         alert("Status: " + textStatus); alert("Error: " + errorThrown); 
       }     
     })
+    
   })
 
   function next(companyNumber) {
@@ -43,7 +45,7 @@ window.addEventListener("load", function() {
       crossDomain: true,
       dataType: "jsonp",
       headers: {
-       "Authorization": "Basic " + btoa("-krl2EzpROULbniJf9FlgdF2mHxBhIGinjQ1_fao")
+       "Authorization": "Basic " + btoa("uyqRhJKv06UFc0k9JCLSG6jkIqXnC2r96G9_aMbw")
       },
       success: function(data) {
         var companyStatus = data.company_status;
